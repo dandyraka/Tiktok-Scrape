@@ -38,10 +38,10 @@ if(!empty($json->name)){
     $comment = $json->commentCount;
     $interaction = $json->interactionCount;
     $audio = $json->audio->name;
-    $author = $json->author->name;
-    $username = $json->author->alternateName;
+    $author = $json->creator->name;
+    $username = $json->creator->url;
 
-    echo "\n* Author *\nName : ".$author."\nUsername : ".$username."\n\n";
+    echo "\n* Author *\nName : ".$author."\nUrl : ".$username."\n\n";
     echo "* Info *\nThumbnail : ".$thumbnail."\nUpload Date : ".$uploadDate."\nAudio : ".$audio."\nComment : ".$comment."\nInteraction : ".$interaction."\nVideo URL : ".$video;
     echo "\n\n== END ==";
 }
